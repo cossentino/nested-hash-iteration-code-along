@@ -15,5 +15,16 @@ require 'pry'
   # }
   
 def remove_strawberry(contacts)
+  contacts.each do |key1, value1|
+    if key1 == "Freddy Mercury"
+      value1.each do |key2, value2|
+        if key2 == :favorite_ice_cream_flavors
+          value2.delete_if {|flavor| flavor == "strawberry"}
+        end
+      end
+    end
+  end
+          
 
+contacts
 end
